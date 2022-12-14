@@ -1,20 +1,22 @@
 import React from 'react'
+import axios from "axios";
 import Todolist from './Todolist';
 import { useEffect, useState } from "react";
 
 const TodoDispay = () => {
    const [todos, setTodos] = useState("");
 
-   async function fetchData() {
-     const response = await fetch("http://localhost:4000/todo/getTodos");
-     const data = await response.json();
-     setTodos(data.todos);
-     console.log(data)
-   }
+     const fetchUsersData = async () => {
+       const resp = await axios.get(`http://localhost:4000/todo/getTodos`);
+
+       setTodos(resp.data.todos);
+     };
+
+  
 
    useEffect(() => {
-     fetchData();
-     console.log("first")
+     fetchUsersData();
+     console.log("useeffect calling fetch data")
    }, []);
 
 

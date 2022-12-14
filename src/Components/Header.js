@@ -17,7 +17,7 @@ function Header() {
             Home
           </a>
           <a href="/#" class="mr-5 hover:text-white">
-            Todos
+            search
           </a>
         </nav>
       </div>
