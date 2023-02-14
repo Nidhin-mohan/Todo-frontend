@@ -1,8 +1,6 @@
 import React from 'react'
-import axios from "axios";
-import Todolist from './Todolist';
-import { useEffect, useState } from "react";
 
+import Todolist from './Todolist';
 
 
 const TodoDispay = ({todos}) => {
@@ -10,14 +8,14 @@ const TodoDispay = ({todos}) => {
 
   return (
     <div>
-      <section class="text-gray-400 bg-gray-900 body-font">
-        <div class="flex flex-col text-center w-full mb-10">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2   text-white">
+      <section className="text-gray-400 bg-gray-900 body-font">
+        <div className="flex flex-col text-center w-full mb-10">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2   text-white">
             Todos
           </h1>
         </div>
 
-        <div class=" ">
+        <div className=" ">
           {todos && <Todolist todos={todos} />}
           </div>
       </section>

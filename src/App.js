@@ -24,9 +24,10 @@ function App() {
     }, []);
 
   return (
-    <div className="App" class="text-gray-400 bg-gray-900 body-font">
+    <div  className="text-gray-400 bg-gray-900 body-font">
       <Header />
-      <TodoForm />
+      <TodoForm fetchTodosData={fetchTodosData}
+      BASE_URL= {BASE_URL} />
       <TodoDispay 
       todos ={todos}  
       />
